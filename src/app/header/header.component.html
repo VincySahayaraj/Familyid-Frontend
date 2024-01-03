@@ -1,0 +1,16 @@
+<div class="header-main">
+    <div class="family-header">
+        <div class="logo-familyid">
+            <!-- <img src="../../assets/images/new-familyid.png" alt="family-id" class="family-logo-desktop" (click)="gotoHome()"/> -->
+            <img src="../../assets/images/family-id-logo-new.svg" alt="family-id" class="family-logo-desktop" (click)="gotoHome()"/>
+            <img src="../../assets/images/family-logo-mobile.svg" alt="family-id" class="family-logo-mobile" (click)="gotoHome()"/>
+        </div>
+        <div class="family-heading-nav">
+            <!-- <p class="family-quiz-heading">Find your Family ID</p> -->
+            <p class="family-quiz-heading">Family ID Assessment</p>
+        </div>
+        <div class="retake-section" (click)="retakeTest()" *ngIf="hasRoute('resultpage')" >
+            <button type="button" class="retake-btn" ><img src="../../assets/images/reload-icon.png" class="reload-icon" >RETAKE THE TEST</button>
+        </div>
+    </div>
+</div>

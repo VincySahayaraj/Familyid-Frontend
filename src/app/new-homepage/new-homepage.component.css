@@ -1,0 +1,215 @@
+.newhomepage-banner {
+    background-color: #fff !important;
+    /* padding-bottom: 50px;
+    height: 100%; */
+    /* margin-top: -1px; */
+    overflow-y: hidden;
+    height:100%;
+    padding-bottom: 10px;
+
+}
+
+.get-started-now-new {
+    border-radius: 35px;
+    border: none;
+    background: #45B8E8;
+    color: #FFF;
+    text-align: center;
+    font-family: 'Area-Bold';
+    font-size: 23px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    /* padding: 20px 35px; */
+    /* font-size: 1rem; */
+    min-width: 216px;
+    padding: 15px 32px;
+    margin: 20px 0px;
+}
+
+.get-time-section-new {
+    display: flex;
+    gap: 10px;
+}
+
+.get-time-section-new img {
+    width: 30px;
+    height: 30px;
+}
+
+.banner-content-new {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    /* padding-top: 15px; */
+    padding-top: 30px;
+}
+
+.family-content-heading {
+    color: #231F20;
+    text-align: center;
+    font-family: 'Area-Black';
+    font-size: 60px;
+    /* font-size: 36px; */
+    font-style: normal;
+    font-weight: 900;
+    line-height: 57px;
+    /* margin-bottom: 6px; */
+     margin-bottom: 25px;
+}
+
+.family-content-paragraph {
+    color: #231F20;
+    text-align: center;
+    font-family: Area;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    /* line-height: 35px;
+    width: 460px; */
+    line-height: 42px;
+    width: 640px 
+}
+
+.ten-minutes-text-new {
+    color: #231F20;
+    font-family: Area;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 35px;
+}
+
+.banner-background {
+    /* background: url('../../assets/images/homepage-banner.png') no-repeat bottom; */
+    background: url('../../assets/images/homepage-banner.svg') no-repeat bottom;
+    /* height: 100%; */
+    background-size: cover;
+    /* height: calc(100vh - 151px); */
+    /* height: calc(100vh - 20px); */
+    height:100%;
+    margin-bottom: 47px;
+
+}
+
+@media(max-width:991px) {
+    .family-content-paragraph {
+        color: #231F20;
+        text-align: center;
+        font-family: 'Area';
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 35px;
+        width: 290px;
+        padding: 35px 0px 15px 0px;
+    }
+
+    .family-content-heading {
+        color: #231F20;
+        text-align: center;
+        font-family: 'Area-Black';
+        font-size: 30px;
+        font-style: normal;
+        font-weight: 900;
+        line-height: 42.5px;
+        width: 200px;
+    }
+
+    .get-time-section-new {
+        /* padding-top: 20px; */
+    }
+
+    .banner-background {
+        background-size: 610px;
+        /* height: calc(100vh - 30px); */
+        margin-bottom: 0px;
+        height:100%;
+    }
+
+    .newhomepage-banner {
+        padding-bottom: 30px;
+    }
+}
+
+@media (min-width:1000px) and (max-width:1450px) {
+
+    .banner-background {
+        /* height: calc(100vh - 66px); */
+        margin-bottom: 17px;
+    }
+
+    .get-started-now-new {
+        font-size: 12px;
+        padding: 13px 14px;
+        margin: 10px 0px;
+    }
+
+    .family-content-heading {
+        /* font-size: 20px;
+        margin-bottom: 0px; */
+        font-size: 35px;
+        margin-bottom: 15px;
+    }
+
+    .family-content-paragraph {
+        /* font-size: 14px; */
+        font-size: 16px;
+        line-height: 20px;
+        width: 360px;
+    }
+    .ten-minutes-text-new {
+        font-size: 14px;
+        margin-bottom: 0px;
+    }
+    .get-time-section-new {
+        align-items: center;
+    }
+    .get-time-section-new img {
+        width: 23px;
+        height: 23px;
+    }
+}
+
+
+@media (min-width:1451px) and (max-width:1670px) {
+    .family-content-paragraph {
+        font-size: 16px;
+        line-height: 25px;
+        width: 400px
+    }
+
+    .family-content-heading {
+        font-size: 20px;
+        margin-bottom: 0px;
+    }
+
+    .get-started-now-new {
+        font-size: 14px;
+        padding: 14px 25px;
+        margin: 10px 0px;
+    }
+
+    .ten-minutes-text-new {
+        font-size: 14px;
+        margin-bottom: 0px;
+    }
+
+    .get-time-section-new {
+        align-items: center;
+    }
+
+    .get-time-section-new img {
+        width: 23px;
+        height: 23px;
+    }
+
+    .banner-content-new {
+        padding-top: 10px;
+    }
+    .banner-background {
+        /* height: calc(100vh - 95px); */
+        margin-bottom: 16px;
+    }
+}

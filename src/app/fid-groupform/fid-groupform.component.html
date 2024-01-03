@@ -1,0 +1,156 @@
+<section class="fid-groupform-main">
+    <div class="done-groupinner-section">
+        <div class="content-groupinner-section">
+            <div class="family-group-Logo">
+                <!-- <img src="../../assets/images/groupformimage.png" class="family-group-img" alt="boy-sitting" /> -->
+                <img src="../../assets/images/gilrs-group.svg" class="family-group-img" alt="boy-sitting" />
+            </div>
+            <div class="invite-your-family">
+                <p class="you-are-text">Invite your family to take the test</p>
+                <p class="content-for-email">Invite your family members to take the test and get their perspectives to
+                    determine your Family ID.</p>
+            </div>
+            <div class="invitation-add">
+                <form class="invite-form" [formGroup]="inviteForm" (ngSubmit)="onSubmit()">
+                    <ol class="invite-fields" formArrayName="invitor">
+                        <li *ngFor="let email of  getControls(); let i = index" [formGroupName]="i"
+                            class="invitation-list">
+                            <div class="details-filling-main">
+                                <div class="col-md-6 col-lg-6 col-xl-6  col-xs-12 col-sm-12 Name-section">
+                                    <div class="first-name">
+                                        <label class="first-name-text">
+                                            First name
+                                        </label>
+                                        <input type="text" class="input-box-type" placeholder="John"
+                                            [formControlName]="'name'"
+                                            [ngClass]="{'is-invalid': submitted && f.controls.invitor.controls[i].controls.name.errors }" />
+
+                                        <!-- First Name Validation -->
+                                        <div *ngIf="submitted && f.controls.invitor.controls[i].controls.name.errors"
+                                            class="invalid-feedback">
+                                            <div *ngIf=" f.controls.invitor.controls[i].controls.name.errors.required">
+                                                First Name is required</div>
+                                            <!-- <div class="alert-text"
+                                                *ngIf="f.controls.invitor.controls[i].controls.name.errors.minlength">
+                                                Name must be 3
+                                                to 60 alphabets.
+                                            </div>
+                                            <div class="alert-text"
+                                                *ngIf="f.controls.invitor.controls[i].controls.name.errors.maxlength">
+                                                Name must be 3
+                                                to 60 alphabets.
+                                            </div> -->
+                                            <div class="alert-text"
+                                                *ngIf="f.controls.invitor.controls[i].controls.name.errors.pattern || f.controls.invitor.controls[i].controls.name.errors.maxlength || f.controls.invitor.controls[i].controls.name.errors.minlength">
+                                                Name should not exceed above 60 letters: Special characters and numbers
+                                                are
+                                                not
+                                                allowed.
+                                            </div>
+                                        </div>
+
+                                        <!-- <div class="invalid-feedback alert-text" id="fullWhitespaceFirstname_{{i}}"
+                                            [style.display]="'none'" *ngIf="checkEmpty()">
+                                            Field should not contain only white spaces.
+                                        </div> -->
+                                        <div class="invalid-feedback alert-text" *ngIf="checkEmpty(i)">
+                                            Field should not contain only white spaces.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-6 col-xl-6  col-xs-12 col-sm-12 Name-section">
+                                    <div class="first-name">
+                                        <label class="first-name-text">
+                                            Email
+                                        </label>
+                                        <input type="text" class="input-box-type" placeholder="speter@mail.com"
+                                            [formControlName]="'email'"
+                                            [ngClass]="{'is-invalid': submitted && f.controls.invitor.controls[i].controls.email.errors}" />
+
+                                        <!-- Email Validation -->
+                                        <div *ngIf="submitted && f.controls.invitor.controls[i].controls.email.errors"
+                                            class="invalid-feedback">
+                                            <div *ngIf=" f.controls.invitor.controls[i].controls.email.errors.required">
+                                                Email is required</div>
+                                            <div
+                                                *ngIf="f.controls.invitor.controls[i].controls.email.errors.email || f.controls.invitor.controls[i].controls.email.errors.pattern">
+                                                Invalid email format. Please enter a valid email address without spaces
+                                                between letters.</div>
+                                        </div>
+                                        <div class="invalid-feedback alert-text" id="fullWhitespaceEmail_{{i}}"
+                                            [style.display]="'none'">
+                                            Field should not contain only white spaces.
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6 col-lg-6 col-xl-6  col-xs-12 col-sm-12 Name-section">
+                                    <div class="first-name">
+                                        <label class="first-name-text">
+                                            Role
+                                        </label>
+                                        <select #roles class="custom-select mb-3"
+                                            class="select-your-role input-box-type" [formControlName]="'familyrole'"
+                                            (change)="CheckOthers(roles.value,i)"
+                                            [ngClass]="{'is-invalid': submitted && f.controls.invitor.controls[i].controls.familyrole.errors}">
+                                            <option class="select-your-role" value="">- Select their role -</option>
+                                            <option *ngFor="let role of Role">
+                                                {{ role }}
+                                            </option>
+                                        </select>
+
+                                        <div *ngIf="submitted && f.controls.invitor.controls[i].controls.familyrole.errors"
+                                            class="invalid-feedback">
+                                            <div
+                                                *ngIf=" f.controls.invitor.controls[i].controls.familyrole.errors.required">
+                                                Role is required</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="add-option">
+                                    <img src="../../assets/images/delete-icon.png" (click)="removeOrClearEmail(i)">
+                                </div>
+                            </div>
+                            <div class="details-filling-other" id="otherchange_{{i}}" [style.display]="'none'">
+                                <div class="col-md-6 col-lg-6 col-xl-6  col-xs-12 col-sm-12 name-section">
+                                    <div class="first-name">
+                                        <label class="first-name-text">
+                                            Other
+                                        </label>
+                                        <input id="others{{i}}" type="text" class="input-box-type"
+                                            placeholder="Aunt/Uncle" [formControlName]="'other'" />
+                                        <div class="invalid-feedback other-validate" *ngIf="!checkPattern(i)">
+                                            Other roles must contain only letters: Special characters
+                                            and numbers are not allowed.
+                                        </div>
+                                        <div class="invalid-feedback alert-text"
+                                            *ngIf="!checkEmptyOther(i)">
+                                            <div>Other is required
+                                            </div>
+                                        </div>
+                                        <div class="invalid-feedback alert-text" *ngIf="checkSpaceOther(i)">
+                                            Field should not contain only white spaces.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ol>
+                    <div>
+                        <div class="show-my-btn">
+                            <button class="show-my-results" [disabled]="false" type="submit">
+                                SEND INVITE
+                            </button>
+                        </div>
+                    </div>
+                </form>
+                <button type="button" class="add-btn" (click)="addEmailFormGroup()">+ADD</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Loader -->
+<ngx-spinner class="loader-spin" size="default" type="ball-scale-pulse">
+    <p class="loading-text">Please Wait.... </p>
+</ngx-spinner>

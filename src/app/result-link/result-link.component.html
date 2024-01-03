@@ -1,0 +1,45 @@
+<section class="result-section-main">
+    <div class="result-inner-section">
+        <div class="h3-heading">
+            <p class="name-your-family"> You have identified your family as a <span
+                    class="family-type">{{this.familyType}} Family</span></p>
+        </div>
+        <div class="family-type-logo">
+            <img src={{url}} alt="family-logo">
+        </div>
+        <div class="progress-result-main">
+            <div>
+                <h3 class="score-heading">Here’s how you scored in each segment</h3>
+            </div>
+            <div class="row percentage-score">
+                <div *ngFor='let heading of this.withoutscore;let i=index'
+                    class="col-6 col-lg-3 col-xl-3 col-sm-12 col-xs-12 progress-values">
+                    <p class="percentage-questions">{{heading.CategoryPercentage}}%</p>
+                    <mat-progress-bar mode="determinate" value={{heading.CategoryPercentage}}
+                        style="background-color: #E9E9E9;">
+                    </mat-progress-bar>
+                    <p class="progress-bar-text identity">{{heading.CategoryName}} </p>
+                </div>
+            </div>
+        </div>
+        <div class="family-content" [ngClass]="readMore ? 'family-content' : 'family-content-scroll'">
+            <div [innerHTML]="this.text">
+            </div>
+            <!-- <a class="read-more" (click)="toggleView()">{{readMore? 'Read more':'Show less'}}</a> -->
+        </div>
+        <div class="invite-family-section" [ngClass]="this.isinvitee ? 'isivitee-hide' : 'isivitee-show'">
+            <h3 class="invite-text">INVITE YOUR FAMILY</h3>
+            <div class="invite-img">
+                <img src="../../assets/images/groupformimage.png">
+                <p class="invite-description">Invite your family members to take the test and discover your areas of
+                    alignment as well as areas you need to focus on as a family.</p>
+                <button class="invite-my-family-btn" (click)="invitebtn()">INVITE MY FAMILY</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Loader -->
+<ngx-spinner class="loader" size="default" type="ball-scale-pulse" [name]="'mySpinner'">
+    <p class="loading-text">Please wait...</p>
+</ngx-spinner>

@@ -1,0 +1,146 @@
+.family-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* font-family: 'Montserrat Bold';
+    font-style: normal;
+    font-weight: 700; */
+    font-size: 24px;
+    line-height: 35px;
+    letter-spacing: 2px;
+    /* color: #FFFFFF; */
+ 
+    height: 105px;
+    position: relative;
+    padding: 0 40px;
+
+    color: #231F20;
+
+
+font-family: 'Area-Black';
+font-size: 24px;
+font-style: normal;
+font-weight: 900;
+
+}
+.header-main {
+    /* background: #231F20; */
+    /* background: #fff;  */
+    background: #FEFEFE;
+    position: relative;
+}
+.family-logo-mobile {
+    display: none;
+}
+.family-logo-desktop {
+
+    display: block;
+    cursor: pointer;
+
+    margin-top: 30px;
+    margin-left: 60px;
+    /* width: 340px; */
+}
+.family-logo-mobile {
+    display: none;
+}
+.reload-icon {
+    padding-right: 15px;
+}
+.retake-btn {
+    width: 301px;
+    height: 50px;
+    background: #424242;
+    border-radius: 25px;
+    border: none;
+    color:#fff;
+}
+.retake-section {
+    /* font-family: 'Montserrat Bold'; */
+    font-family: Area;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 21px;
+}
+.family-quiz-heading{
+    position: absolute;
+    left:50%;
+    transform: translate(-50%,-50%);
+    top:50%;
+}
+
+@media(max-width:800px) {
+    .family-logo-desktop {
+        display: none;
+    }
+    .family-logo-mobile {
+        display: block;
+        cursor: pointer;
+        z-index:999;
+    }
+    .family-header {
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 35px;
+        padding:0 25px;
+        justify-content: unset;
+        height: 75px;
+    }
+    .logo-familyid {
+        left: 20px;
+        z-index: 999;
+    }
+    .retake-section {
+        display: none;
+    }
+    .family-quiz-heading{
+        font-size: 18px;
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media(max-width:400px){
+    .family-header {
+        font-size: 16px;
+        line-height: 25px;
+    }
+}
+@media(min-width:801px) and (max-width:999px){
+    .family-logo-desktop {
+        display: none;
+    }
+    .family-logo-mobile {
+        display: block;
+        cursor: pointer;
+    }
+}
+@media(min-width:1000px) and (max-width:1500px){
+    .family-logo-desktop {
+        /* width: 260px; */
+        width:100px
+    }
+
+    .family-header{
+        height:50px;
+        font-size: 18px;
+    }
+    .retake-section{
+        font-size: 14px;
+    }
+    .retake-btn{
+        height:35px;
+        width:200px;
+    }
+}
+@media(min-width:1501px) and (max-width:1670px){
+.family-logo-desktop{
+    width: 135px;
+}
+
+.family-header{
+    height:80px;
+    font-size: 18px;
+}
+
+}

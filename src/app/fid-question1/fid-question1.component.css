@@ -1,0 +1,949 @@
+.fid-question1-main {
+    /* height: calc(100vh - 105px); */
+    /* background-color: #6dc5aa; */
+    /* background-color: #45B8E8; */
+    background-color: #fff;
+    height:100%;
+    position: relative;
+    padding: 50px 0px 100px 0px;
+}
+
+.question-number {
+    /* font-family: 'Montserrat'; */
+    font-family: Area;
+    font-style: normal;
+    font-size: 21px;
+    line-height: 26px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #231F20;
+    padding-bottom: 00px;
+    padding-top: 0px;
+}
+
+.family-pic-background {
+    display: flex;
+    justify-content: center;
+    background: transparent;
+}
+
+.family-pic-background img {
+    opacity: 0.05;
+}
+
+.question-section {
+
+    height: 100%;
+    background-color: #FFF;
+    border-radius: 10px;
+    margin: 0 auto;
+    padding: 50px 100px 50px 100px;
+    width: 100%;
+    max-width: 1110px;
+    position: relative;
+    /* background: #fff url("../../assets/images/opacity-low-family.png") no-repeat center center; */
+    background: #fff url("../../assets/images/Evolving-background.png") no-repeat bottom center;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+    display: flex;
+}
+
+.fid-question1-main .question-section .mat-mdc-progress-bar .mdc-linear-progress__buffer {
+    position: relative;
+}
+
+.mat-mdc-progress-bar .mdc-linear-progress__buffer-bar {
+    /* --mdc-linear-progress-active-indicator-color: #EDC228 !important; */
+    --mdc-linear-progress-active-indicator-color:#FCC34F !important;
+    border-radius: 50px !important;
+}
+
+.mat-mdc-progress-bar {
+    /* --mdc-linear-progress-active-indicator-color: #EDC228 !important; */
+    --mdc-linear-progress-active-indicator-color:#FCC34F !important;
+    border-radius: 50px !important;
+}
+
+.question-text {
+
+    /* font-family: 'Adobe Garamond';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 34px; */
+    /* text-align: center;
+    color: #231F20; */
+    padding-bottom: 60px;
+    color: #231F20;
+    text-align: center;
+    font-family: Area;
+    /* font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 47px; */
+
+    font-size: 27px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 32px;
+
+}
+
+.option-answer {
+    margin-top: 25px;
+}
+
+#form-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+form #form-title {
+    margin-top: 0;
+    font-weight: 400;
+    text-align: center;
+}
+
+form #debt-amount-slider {
+    display: flex;
+    flex-direction: row;
+    align-content: stretch;
+    position: relative;
+    width: 100%;
+    height: 50px;
+    user-select: none;
+}
+
+form #debt-amount-slider::before {
+    content: " ";
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    width: calc(100% * (4 / 5));
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #D8D8D8;
+}
+
+form #debt-amount-slider input,
+form #debt-amount-slider label {
+    box-sizing: border-box;
+    flex: 1;
+    user-select: none;
+    cursor: pointer;
+    font-family: 'Area';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 26px;
+    text-align: center;
+    color: #231F20;
+    opacity: 1;
+}
+
+form #debt-amount-slider label {
+    display: inline-block;
+    position: relative;
+    width: 20%;
+    height: 100%;
+    user-select: none;
+}
+
+form #debt-amount-slider label::before {
+    content: attr(data-debt-amount);
+    position: absolute;
+    left: 50%;
+    padding-top: 10px;
+    transform: translate(-50%, 45px);
+    /* font-family: 'Montserrat bold'; */
+    font-style: normal;
+    color: #231F20;
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 26px;
+    letter-spacing: 0.4px;
+    font-weight: 400;
+    transition: all 0.15s ease-in-out;
+
+    color: #231F20;
+
+text-align: center;
+font-family: 'Area-Bold';
+font-size: 21px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+
+form #debt-amount-slider label::after {
+    content: " ";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 15px;
+    height: 15px;
+    /* border: 2px solid #959595; */
+    border-radius: 50%;
+    pointer-events: none;
+    user-select: none;
+    z-index: 1;
+    cursor: pointer;
+    transition: all 0.15s ease-in-out;
+    background: #959595;
+    font-family: 'Area';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 26px;
+    text-align: center;
+    color: #231F20;
+}
+
+form #debt-amount-slider input {
+    display: none;
+}
+
+form #debt-amount-slider input:checked+label::before {
+    opacity: 1;
+}
+
+form #debt-amount-slider input:checked+label::after {
+    border-width: 4px;
+    transform: translate(-50%, -50%) scale(0.75);
+}
+
+form #debt-amount-slider input:checked~#debt-amount-pos {
+    opacity: 1;
+}
+
+form #debt-amount-slider input:checked:nth-child(1)~#debt-amount-pos {
+    left: 10%;
+}
+
+form #debt-amount-slider input:checked:nth-child(3)~#debt-amount-pos {
+    left: 30%;
+}
+
+form #debt-amount-slider input:checked:nth-child(5)~#debt-amount-pos {
+    left: 50%;
+}
+
+form #debt-amount-slider input:checked:nth-child(7)~#debt-amount-pos {
+    left: 70%;
+}
+
+form #debt-amount-slider input:checked:nth-child(9)~#debt-amount-pos {
+    left: 90%;
+}
+
+/* form #debt-amount-slider label:hover::after {
+    display: block;
+    position: absolute;
+    top: 50%;
+    width: 23px;
+    height: 23px;
+    background: #EDC228;
+    border-radius: 50% !important;
+    transition: all 0.3s ease-in-out;
+    transform: translate(-50%, -50%);
+    border: 5px solid #fff;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50% !important;
+    box-shadow: 0px 0px 0px 5px #edc228;
+}
+
+form #debt-amount-slider label:hover::before {
+    transform: translate(-50%, 45px) scale(1.1) !important;
+    transition: all 0.15s linear;
+    color: #edc228;
+} 
+
+form #debt-amount-slider label:hover::after {
+    transform: translate(-50%, -50%) scale(1.25);
+} */
+
+@media (max-width: 768px) {
+    form #debt-amount-slider label:active::after {
+        display: block;
+        position: absolute;
+        top: 50%;
+        width: 23px;
+        height: 23px;
+        /* background: #EDC228; */
+        background: #45B8E8;
+        border-radius: 50% !important;
+        transition: all 0.5s ease-in-out;
+        transform: translate(-50%, -50%);
+        border: 5px solid #fff;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50% !important;
+        box-shadow: 0px 0px 0px 5px #45B8E8;
+    }
+
+    form #debt-amount-slider label:active::before {
+        transform: translate(-50%, 45px) scale(1.1) !important;
+        transition: all 1s linear;
+        /* color: #edc228; */
+        color: #45B8E8;
+    }
+
+    form #debt-amount-slider label:active::after {
+        transform: translate(-50%, -50%) scale(1.25);
+    }
+}
+
+@media (min-width: 768px) {
+
+    /* CSS rules specific to desktop screens (screens wider than 768px) */
+    form #debt-amount-slider label:hover::after {
+        display: block;
+        position: absolute;
+        top: 50%;
+        width: 23px;
+        height: 23px;
+        /* background: #EDC228; */
+        border-radius: 50% !important;
+        transition: all 0.3s ease-in-out;
+        transform: translate(-50%, -50%);
+        border: 5px solid #fff;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50% !important;
+        box-shadow: 0px 0px 0px 5px #45B8E8;
+        background: #45B8E8;
+    }
+
+    form #debt-amount-slider label:hover::before {
+        transform: translate(-50%, 45px) scale(1.1) !important;
+        transition: all 0.15s linear;
+        /* color: #edc228; */
+        color: #45B8E8;
+    }
+
+    form #debt-amount-slider label:hover::after {
+        transform: translate(-50%, -50%) scale(1.25);
+    }
+}
+
+form #debt-amount-slider #debt-amount-pos {
+    display: block;
+    position: absolute;
+    top: 50%;
+    width: 23px;
+    height: 23px;
+    /* background: #EDC228; */
+    background: #45B8E8;
+    border-radius: 50% !important;
+    transition: all 0.3s ease-in-out;
+    transform: translate(-50%, -50%);
+    border: 5px solid #fff;
+    opacity: 0;
+    z-index: 2;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50% !important;
+    box-shadow: 0px 0px 0px 5px #45B8E8;
+
+}
+
+form #debt-amount-slider #debt-amount-pos::after {
+    content: '';
+    border-radius: 50% !important;
+    -webkit-border-radius: 50% !important;
+    -moz-border-radius: 50% !important;
+}
+
+form:valid #debt-amount-slider input+label::before {
+    transform: translate(-50%, 45px) scale(0.9);
+    transition: all 0.15s linear;
+}
+
+form:valid #debt-amount-slider input:checked+label::before {
+    transform: translate(-50%, 45px) scale(1.1);
+    transition: all 0.15s linear;
+    color: #45B8E8;
+}
+
+form #debt-amount-slider #debt-amount-pos {
+
+    transition: none;
+
+}
+
+.identity {
+    /* color: #EDC228 !important; */
+    color:#FCC34F !important;
+    font-size: 700;
+    font-family: "Montserrat Bold"
+}
+
+.invalid-feedback {
+    color: red;
+    margin-top: 5px;
+    font-family: 'Montserrat bold';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    bottom: 18%;
+
+}
+
+.validation-question {
+    text-align: center;
+}
+
+.withoutanimation {
+    animation: withoutanimation 2s ease-in;
+}
+
+@keyframes question {
+    0% {
+        left: 100%;
+        opacity: 0;
+    }
+
+    50% {
+        left: 0%;
+        opacity: 1;
+    }
+
+    100% {
+        left: 0%;
+        opacity: 1;
+    }
+}
+
+@keyframes withoutanimation {
+    0% {
+        left: 100%;
+        opacity: 0;
+    }
+
+    50% {
+        left: 0%;
+        opacity: 1;
+    }
+
+    100% {
+        left: 0%;
+        opacity: 1;
+    }
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+        width: 24px;
+        opacity: 1;
+        margin-right: 12px;
+    }
+
+    to {
+        transform: rotate(360deg);
+        width: 24px;
+        opacity: 1;
+        margin-right: 12px;
+    }
+}
+
+.left-arrow {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    left: 100px;
+}
+
+.right-arrow {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    right: 100px;
+}
+
+.next-text {
+    font-family: 'Montserrat';
+    font-weight: 100;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    letter-spacing: 0.761905px;
+    color: #231F20;
+    margin: 0px;
+    padding-right: 10px;
+    font-style: italic;
+    opacity: 0.4;
+
+}
+
+.progress-bar-text {
+    padding-top: 10px;
+    display: flex;
+    /* font-family: 'Montserrat Bold';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 21px; */
+    line-height: 26px;
+    /* text-align: center;
+    text-transform: uppercase; */
+    color: #231F20;
+    justify-content: center;
+    text-align: center;
+    font-family: 'Area';
+    font-size: 21px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: uppercase;
+
+}
+
+.arrow-icons {
+
+    display: flex;
+    align-items: center;
+    /* justify-content: space-between; */
+    padding: 90px 30px 10px 30px;
+}
+
+.arrow-icons button {
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+}
+
+.prev-text {
+    padding: 0px 0px 0px 10px;
+    display: flex;
+    align-items: center;
+    margin: 0px;
+}
+
+.prev-text {
+    padding: 0px 0px 0px 10px;
+    display: flex;
+    align-items: center;
+    margin: 0px;
+    font-size: 18px;
+    font-family: 'Montserrat';
+}
+
+.total-questions {
+    font-weight: 500;
+}
+
+.qn-number {
+    font-weight: 700;
+    font-family: 'Area-Bold'
+}
+
+.current-category {
+
+    font-weight: 800;
+    /* color: #EDC228; */
+    color:#FCC34F;
+    font-family:'Area-Bold';
+    
+}
+
+.hide-prev {
+    /* opacity: 0.4; */
+    display: none;
+}
+
+.show-prev {
+    visibility: visible;
+}
+
+.hide-next {
+    display: none;
+}
+
+.show-next {
+    visibility: visible;
+}
+
+/* scroll */
+.question {
+
+    /* min-height: 70px; */
+    /* overflow-y: auto; */
+    padding: 0;
+    margin: 0;
+    /* height: 70px; */
+    overflow-x: hidden;
+    /* overflow-y:hidden; */
+}
+
+::-webkit-scrollbar {
+    width: 0;
+    /* Remove scrollbar space */
+    background: transparent;
+    /* Optional: just make scrollbar invisible */
+}
+
+.animationadded {
+    animation: question 2s ease-in;
+}
+
+.question-text {
+    padding-bottom: 0px;
+    margin: 0px;
+    position: relative;
+}
+
+.question::-webkit-scrollbar {
+    width: 0em;
+}
+
+.question::-webkit-scrollbar-track {
+    visibility: hidden;
+}
+
+@media(min-width:1000px) and (max-width:1500px) {
+
+    .arrow-icons {
+        padding: 60px 30px 10px 30px;
+    }
+
+    .progress-bar-text {
+        font-size: 14px;
+    }
+
+    .question-number {
+        padding-bottom: 10px;
+        font-size: 15px;
+        padding-top: 10px;
+    }
+
+    .question-text {
+        font-size: 25px;
+    }
+
+    form #debt-amount-slider label::before {
+        padding-top: 0px;
+        font-size: 18px;
+    }
+
+    .question-section {
+
+        /* background-size: 350px 250px; */
+    }
+}
+
+@media(min-width:1500px) and (max-width:1850px) {
+
+    .arrow-icons {
+        padding: 70px 30px 10px 30px;
+    }
+
+    .question-text {
+        padding-bottom: 25px;
+    }
+}
+
+@media(max-width:800px) {
+
+    .withoutanimation {
+        animation: unset;
+    }
+
+    .animationadded {
+        animation: unset;
+    }
+
+    .fid-question1-main {
+        /* height: auto; */
+        height:100%;
+    }
+
+    form #debt-amount-slider::before {
+
+        width: calc(100% * (4.1 / 5));
+    }
+
+    form #debt-amount-slider label::after {
+
+        width: 10px;
+        height: 10px;
+    }
+
+    form #debt-amount-slider::before {
+        height: 11px;
+        border-radius: 3px;
+    }
+
+    .question-section .row {
+        padding: 0 24px;
+    }
+
+    form #debt-amount-slider #debt-amount-pos {
+
+        width: 25px;
+        height: 25px;
+    }
+
+    .question-section {
+
+        width: 350px;
+        padding: 20px 0 35px 0;
+        justify-content: unset;
+    }
+
+    .fid-question1-main {
+
+        padding: 15px 0px 15px 0px;
+    }
+
+    .question-section {
+
+        /* background-size: 300px 200px;
+        background-position-y: 81px; */
+        background-size: 279px 237px;
+    background-position-y: 111px;
+
+    }
+
+    .identity {
+        color: #EDC228 !important;
+        font-size: 700 !important;
+        font-family: "Montserrat Bold" !important;
+    }
+
+    .progress-bar-text {
+
+        /* font-family: 'Montserrat'; */
+        font-family: Area;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17px;
+        text-align: center;
+        text-transform: uppercase;
+        color: #343333;
+    }
+
+    .question-number {
+
+        /* font-family: 'Montserrat'; */
+        font-family: Area;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 22px;
+        text-align: center;
+        text-transform: uppercase;
+        color: #EDC228;
+        padding-top: 0;
+    }
+
+    .qn-number {
+
+        font-weight: 700;
+    }
+
+    .total-questions {
+
+        font-weight: 500;
+    }
+
+    .question {
+        width: 320px;
+        margin: 0 auto;
+        overflow-y: hidden;
+        /* height: 100%; */
+        max-height: 300px;
+    }
+
+    .question-text {
+        font-family: 'Area';
+        font-style: normal;
+        font-weight: 400;
+        /* font-size: 21px;
+        line-height: 31px; */
+        font-size: 17px;
+        line-height: 22px;
+        padding: 0px 15px 10px 15px;
+        text-align: center;
+        color: #231F20;
+
+    }
+
+    form #debt-amount-slider label::before {
+
+        font-family: 'Area';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 15px;
+        text-align: center;
+        color: #343333;
+
+    }
+
+    .question-number {
+        padding-bottom: 15px;
+        padding-top: 40px;
+    }
+
+    .next-text,
+    .prev-text {
+        display: none;
+    }
+
+    .arrow-icons {
+        padding: 80px 10px 0px 10px;
+    }
+
+    .arrow-icons .left-arrow {
+        justify-content: start;
+        left: unset;
+    }
+
+    .arrow-icons .right-arrow {
+        justify-content: end;
+        position: absolute;
+        right: 10px;
+        /* padding-left: 270px; */
+    }
+
+    form {
+        margin-top: 55px;
+    }
+
+    .current-category {
+
+        font-weight: 800;
+        color: #EDC228;
+
+    }
+
+    .invalid-feedback {
+
+        bottom: 13%;
+        font-size: 12px;
+
+    }
+
+    .question-text::-webkit-scrollbar {
+        width: 5px;
+    }
+
+    .question-text::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    }
+
+    .question-text::-webkit-scrollbar-thumb {
+        background-color: darkgrey;
+        outline: 1px solid slategrey;
+    }
+
+    .sign-up-resources-main {
+
+        max-width: 350px !important;
+        padding: 0px 20px 10px 20px !important;
+    }
+
+    .sign-up-image-section img {
+        width: 330px;
+        margin: 10px 0px;
+
+    }
+
+    .sign-up-inner {
+        flex-direction: column;
+        padding: 30px 0px;
+    }
+
+    .sign-up-text {
+
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 36px;
+        margin: 20px auto;
+        text-align: center;
+
+    }
+
+    .sign-up-text-content {
+        order: 2;
+        padding: 0px;
+    }
+
+    .sign-up-image-section {
+        order: 1;
+    }
+
+    .signup-btn-text {
+        display: none;
+    }
+
+    .sign-up-resources-main {
+        padding: 0px 20px 10px 20px;
+    }
+
+    .sign-me {
+        margin: 0 auto;
+        width: 280px !important;
+        font-size: 18px !important;
+    }
+
+    .sign-up-heading-mobile {
+        font-family: 'Area-Bold';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 21px;
+        line-height: 26px;
+        letter-spacing: 0.761905px;
+        text-transform: uppercase;
+        color: #000000;
+        text-align: center;
+        display: block;
+    }
+
+    .based-on-results {
+        margin: 30px 0px 0px 50px;
+        font-weight: 400;
+        font-size: 10px;
+        font-family: 'Area';
+        line-height: 16px;
+
+    }
+
+    .notification-based-result {
+        width: 71px;
+    }
+
+    .notification-based-result {
+
+        margin-top: 20px;
+        margin-left: -5px;
+        font-family: 'Area';
+        font-style: normal;
+        font-size: 10px;
+        line-height: 11px;
+    }
+
+    .main-signup {
+        padding-bottom: 50px;
+    }
+
+}
+
+@media(min-width:1000px) and (max-width:1400px) {
+    .question-section {
+        padding-top: 20px;
+    }
+
+    .fid-question1-main {
+        padding: 30px 0 60px;
+    }
+
+}

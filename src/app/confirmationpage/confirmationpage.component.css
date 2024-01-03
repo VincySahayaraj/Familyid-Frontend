@@ -1,0 +1,328 @@
+.done-groupinner-section {
+
+    height: 100%;
+    background-color: #FFF;
+    border-radius: 10px;
+    margin: 0 auto;
+    padding: 50px 100px 100px 100px;
+    width: 100%;
+    max-width: 816px;
+    position: relative;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.fid-groupform-main {
+    /* background-color: #6dc5aa; */
+    background-color: #45B8E8;
+    position: relative;
+    padding: 100px 0px 80px 0px;
+}
+
+.family-group-Logo .family-group-img {
+
+    margin-top: -127px;
+    width: 175px;
+    height: 167px;
+}
+
+.confirmation-tick-icon {
+    margin: 20px;
+}
+
+.family-group-Logo {
+    display: flex;
+    justify-content: center;
+
+}
+
+.invite-your-family {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center
+}
+
+.main-signup {
+
+    padding-bottom: 100px;
+}
+
+.you-are-text {
+
+    /* font-family: 'Montserrat Bold';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 42px;
+    text-align: center;
+    color: #343333; */
+
+
+    color: #27282A;
+    text-align: center;
+    font-family: 'Area-Bold';
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+
+}
+
+.content-groupinner-section {
+    /* max-width: 490px; */
+    max-width: 470px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0 auto;
+    height: 100%;
+}
+
+.go-back-results {
+    /* font-family: "Helvetica", "Helvetica Neue", "HelveticaNeue", Helvetica, Arial, sans-serif; */
+    font-family: "Helvetica Bold";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 17px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #202020;
+    margin: 10px 0px 30px 0px;
+    max-width: 700px;
+    /* text-decoration: underline solid #EDC228 2px; */
+    text-decoration: underline solid #45B8E8 2px;
+    
+    -webkit-text-decoration-line: underline solid 2px;
+    -webkit-text-decoration-color: #45B8E8;
+    -webkit-text-decoration-line: underline !important;
+    -webkit-text-decoration-style: solid !important;
+    -webkit-text-decoration-thickness: 2px !important;
+    cursor: pointer;
+
+}
+
+/* second section */
+.sign-up-resources-main {
+
+    height: auto;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    margin: 0 auto;
+    padding: 100px 60px 0px 60px;
+    width: 100%;
+    max-width: 1012px;
+    position: relative;
+
+}
+
+.sign-up-inner {
+    display: flex;
+}
+
+.sign-up-heading {
+    /* font-family: 'Montserrat Bold'; */
+    font-family: 'Area-Bold';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 21px;
+    line-height: 26px;
+    letter-spacing: 0.761905px;
+    text-transform: uppercase;
+    color: #000000;
+
+ 
+}
+
+.sign-up-heading-mobile {
+    display: none;
+}
+
+.sign-up-text {
+
+    /* font-family: 'Adobe Garamond'; */
+    font-family: Area;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 36px;
+    margin-top: 25px;
+    max-width: 350px;
+    color: #272424;
+
+}
+
+.sign-up-image-section {
+    display: flex;
+    justify-content: center;
+
+}
+
+.sign-up-image-section img {
+    margin-bottom: -54px;
+    margin-top: -30px;
+}
+
+.sign-me {
+
+    /* background: #EDC228; */
+    background: #45B8E8;
+    border-radius: 25px;
+    width: 280px;
+    height: 50px;
+    border: none;
+    /* font-family: 'Montserrat Bold'; */
+    font-family: Area;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 21px;
+    line-height: 26px;
+    text-align: center;
+    letter-spacing: 0.761905px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    display: block;
+    margin-top: 40px;
+
+}
+
+.register-btn-text {
+    display: none;
+}
+
+.signup-btn-text {
+    display: block;
+    margin: 0px;
+}
+
+@media screen and (min-width:1000px) and (max-width:1500px) {
+
+    .you-are-text {
+        font-size: 2.8vh;
+    }
+
+    .content-for-email {
+        max-width: 350px;
+        font-size: 18px;
+        line-height: 21px;
+    }
+}
+
+@media(max-width:900px) {
+    .fid-groupform-main {
+
+        height: auto;
+        padding: 145px 0px 80px 0px;
+    }
+
+    .done-groupinner-section {
+
+        padding: 10px 10px 30px 10px;
+        max-width: 350px;
+
+    }
+
+    .family-group-logo .family-group-img {
+        margin-top: -78px;
+    }
+
+    .family-group-logo img {
+
+        height: 157px;
+        width: 117px;
+    }
+
+    .you-are-text {
+
+        font-size: 21px;
+        line-height: 27px;
+        padding: 10px 25px 30px 25px;
+
+    }
+
+    .content-for-email {
+
+        font-size: 21px;
+        line-height: 22px;
+
+    }
+
+    .sign-up-image-section img {
+        width: 330px;
+        margin: 10px 0px;
+
+    }
+
+    .sign-up-inner {
+        flex-direction: column;
+    }
+
+    .sign-up-resources-main {
+        background: none;
+    }
+
+    .sign-up-heading {
+        display: none;
+    }
+
+    .sign-up-heading-mobile {
+        font-family: 'Montserrat Bold';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 22px;
+        letter-spacing: 0.761905px;
+        text-transform: uppercase;
+        color: #000000;
+        display: block;
+        text-align: center;
+        padding: 0px 40px;
+
+    }
+
+    .sign-up-text {
+
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 36px;
+        margin: 20px auto;
+        text-align: center;
+
+    }
+
+    .sign-up-text-content {
+        order: 2
+    }
+
+    .sign-up-image-section {
+        order: 1;
+    }
+
+    .register-btn-text {
+        display: block;
+        text-align: center;
+        margin: 0px;
+    }
+
+    .signup-btn-text {
+        display: none;
+    }
+
+    .sign-up-resources-main {
+        padding: 0px 20px 0px 20px;
+    }
+
+    .sign-me {
+        margin: 0 auto;
+        width: 310px;
+        background:#FCC34F;
+    }
+
+    .main-signup {
+
+        padding-bottom: 70px;
+    }
+}

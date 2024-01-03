@@ -1,0 +1,432 @@
+.done-inner-section {
+
+    height: 100%;
+    background-color: #FFF;
+    border-radius: 10px;
+    margin: 0 auto;
+    padding: 50px 100px 50px 100px;
+    width: 100%;
+    max-width: 1110px;
+    position: relative;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.fid-form-main {
+
+    /* background-color: #6dc5aa; */
+    background-color: #45B8E8;
+    position: relative;
+    padding: 80px 0px 23px 0px;
+}
+
+.boy-sitting-image .boy-sitting {
+    margin-top: -169px;
+}
+
+.boy-sitting-image {
+    display: flex;
+    justify-content: center;
+
+}
+
+.you-are-done {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center
+}
+
+.check-image {
+    width: 44px;
+    height: 34px;
+    margin-top: -24px;
+    margin-bottom: 10px;
+}
+
+.you-are-text {
+
+    /* font-family: 'Montserrat Bold';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 4.8vh;
+    line-height: 34px;
+    text-align: center;
+    color: #343333; */
+
+    color: #343333;
+    text-align: center;
+    font-family: 'Area-Black';
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 34px;
+
+}
+
+.content-inner-section {
+    max-width: 640px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0 auto;
+    height: 100%;
+}
+
+.content-for-email {
+    /* font-family: 'Adobe Garamond'; */
+    font-family: Area;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 34px;
+    text-align: center;
+    color: #343333;
+    margin-bottom: 30px;
+    max-width: 550px;
+
+}
+
+.details-filling-main {
+
+    display: flex;
+    justify-content: center;
+
+}
+
+.details-filling-other {
+    display: flex;
+}
+
+.input-box-type {
+    background: #F5F5F5;
+    border-radius: 3px;
+    border: #F5F5F5;
+    border-radius: 3px;
+    width: 299px;
+    height: 55px;
+    padding-left: 10px;
+}
+
+.input-box-type::placeholder {
+
+    /* font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 21px;
+    line-height: 26px;
+    color: #868686; */
+
+    color: #9B9B9B;
+    font-family: Area;
+    font-size: 21px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+
+}
+
+.select-your-role {
+
+    /* font-family: 'Montserrat'; */
+    font-family: Area;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 21px;
+    line-height: 26px;
+    color: #868686;
+    /* -moz-font-family: "Montserrat"; */
+    -moz-font-family: Area;
+
+}
+
+.input-box-type:hover {
+    border: 2px solid #45B8E8;
+}
+
+.done-inner-section select:focus {
+    border: 2px solid #45B8E8;
+    outline: none !important;
+}
+
+.done-inner-section input:focus {
+    outline: none !important;
+    border: 2px solid #45B8E8 !important;
+}
+
+.first-name {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 29px
+}
+
+.first-name-text {
+    /* font-family: 'Montserrat bold';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    color: #3B3A3A; */
+
+    color: #3B3A3A;
+    font-family: 'Area-Black';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.first-name:has(input:focus) label {
+    /* color: #3BB1B9; */
+    color: #45B8E8
+}
+
+.first-name:has(select:focus) label {
+    /* color: #3BB1B9; */
+    color: #45B8E8
+}
+
+.show-my-btn {
+    display: flex;
+    justify-content: center;
+    margin-top: -40px;
+}
+
+.show-and-prev-btn {
+
+    margin-top: 20px;
+}
+
+.previous-left-arrow {
+
+    padding-left: 20px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.prev-text {
+    padding-left: 10px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    text-align: center;
+    letter-spacing: 0.761905px;
+    color: #343333;
+    margin-bottom: 0px;
+}
+
+.show-my-results {
+
+    background: #45B8E8;
+    border-radius: 25px;
+    height: 50px;
+    width: 299px;
+    border: 1px solid #45B8E8;
+    font-family: 'Montserrat Bold';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 21px;
+    line-height: 26px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    margin: 0 auto;
+
+}
+
+.done-inner-section select {
+
+    background: url('../../assets/images/down-arrow.png') no-repeat right #F5F5F5 !important;
+    background-position: calc(100% - 0.75rem) center !important;
+    -moz-appearance: none !important;
+    -webkit-appearance: none !important;
+    appearance: none !important;
+
+}
+
+.invalid-feedback {
+
+    color: red;
+    margin-top: 5px;
+
+}
+
+option {
+    -moz-font-family: "Montserrat Bold";
+}
+
+@media screen and (min-width:1000px) and (max-width:1500px) {
+
+    .boy-sitting-image .boy-sitting {
+        width: 129px;
+        margin-top: -146px;
+
+    }
+
+    .you-are-text {
+        font-size: 2.8vh;
+    }
+
+    .content-for-email {
+        /* max-width: 350px; */
+        max-width: 410px;
+        font-size: 18px;
+        line-height: 21px;
+    }
+
+    .first-name-text {
+        font-size: 12px;
+    }
+
+    .input-box-type {
+        height: 35px;
+    }
+
+    .input-box-type::placeholder {
+
+        font-size: 11px;
+
+    }
+
+    .check-image {
+        width: 30px;
+        height: 22px;
+
+    }
+
+    .select-your-role {
+        font-size: 11px;
+    }
+
+    .content-for-email {
+        margin-bottom: 10px;
+    }
+
+    .first-name {
+        margin-bottom: 10px;
+
+    }
+
+    .show-my-results {
+        font-size: 15px;
+        height: 35px;
+    }
+
+    .show-my-btn {
+        margin-top: -25px;
+    }
+
+    .prev-text {
+        font-size: 11px;
+    }
+
+    .you-are-text {
+        margin-bottom: 0px;
+    }
+
+    .prev-arrow {
+
+        width: 16px;
+        height: 11px;
+
+    }
+}
+
+@media(max-width:800px) {
+    .fid-form-main {
+        height: auto;
+    }
+
+    .done-inner-section {
+        padding: 10px;
+        max-width: 350px;
+    }
+
+    .boy-sitting-image .boy-sitting {
+        margin-top: -78px;
+    }
+
+    .boy-sitting-image img {
+        height: 157px;
+        width: 117px;
+    }
+
+    .details-filling-main {
+        flex-direction: column;
+    }
+
+    .details-filling-other {
+
+        flex-direction: column;
+        justify-content: unset;
+    }
+
+    .Name-section-other {
+        order: 2;
+    }
+
+    .input-box-type {
+        width: 297px;
+        height: 45px;
+    }
+
+    .you-are-text {
+        font-size: 21px;
+        line-height: 34px;
+    }
+
+    .content-for-email {
+        font-size: 21px;
+        line-height: 22px;
+    }
+
+    .first-name-text {
+        font-size: 14px;
+        line-height: 17px;
+    }
+
+    .check-image {
+        margin-top: 0
+    }
+
+    .input-box-type::placeholder {
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 22px;
+    }
+
+    .select-your-role {
+
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 22px;
+
+    }
+
+    .show-my-btn {
+        display: flex;
+        flex-direction: column-reverse;
+        margin-top: 0px;
+    }
+
+    .show-my-results {
+        display: block;
+    }
+
+    .previous-left-arrow {
+        margin: 25px 0px 50px 0px;
+        width: 100px;
+
+    }
+
+    .show-and-prev-btn {
+
+        display: flex;
+        flex-direction: column-reverse;
+
+    }
+}

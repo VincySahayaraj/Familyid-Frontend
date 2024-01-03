@@ -1,0 +1,175 @@
+<section class="fid-form-main">
+    <div class="done-inner-section">
+        <div class="content-inner-section">
+            <div class="boy-sitting-image">
+                <!-- <img src="../../assets/images/boy-sitting.png" class="boy-sitting" alt="boy-sitting" /> -->
+                <img src="../../assets/images/man-fidform.svg" class="boy-sitting" alt="boy-sitting" />
+            </div>
+            <div class="you-are-done">
+                <img src="../../assets/images/check.png" class="check-image" alt="check-image" />
+                <p class="you-are-text">You’re all done!</p>
+                <p class="content-for-email">Before we get to your report, please confirm
+                    your details so that we can email you a copy.</p>
+            </div>
+            <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+                <div class="details-filling-main">
+                    <div class="col-md-6 col-lg-6 col-xl-6  col-xs-12 col-sm-12 Name-section">
+                        <div class="first-name">
+                            <label class="first-name-text">
+                                First name
+                            </label>
+                            <input type="text" class="input-box-type" placeholder="John" [formControlName]="'firstname'"
+                                [(ngModel)]="this.inviteename"
+                                [ngClass]="{ 'is-invalid': submitted && f.firstname.errors }" />
+
+                            <!-- Validation -->
+                            <div *ngIf="submitted && f.firstname.errors" class="invalid-feedback">
+                                <div *ngIf="f.firstname.errors.required">First Name is required</div>
+                                <!-- <div class="alert-text" *ngIf="!!registerForm.get('firstname').errors?.minlength">Name
+                                    must be 3 to 60 alphabets.
+                                </div>
+                                <div class="alert-text" *ngIf="!!registerForm.get('firstname').errors?.maxlength">Name
+                                    must be 3 to 60 alphabets.
+                                </div> -->
+                                <div class="alert-text" *ngIf="!!registerForm.get('firstname').errors?.pattern || !!registerForm.get('firstname').errors?.minlength|| !!registerForm.get('firstname').errors?.maxlength">Name should not exceed above 60 letters: Special characters and numbers are
+                                    not
+                                    allowed.
+                                </div>
+                            </div>
+
+                            <div class="invalid-feedback alert-text" *ngIf="checkEmpty()" >
+                                Field should not contain only white spaces.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-6 col-xl-6  col-xs-12 col-sm-12 Name-section">
+                        <div class="first-name ">
+                            <label class="first-name-text">
+                                Last name
+                            </label>
+                            <input type="text" class="input-box-type" placeholder="Smith" [formControlName]="'lastname'"
+                                [ngClass]="{'is-invalid': submitted && f.lastname.errors }" />
+
+                            <!-- Validation -->
+                            <div *ngIf="submitted && f.lastname.errors" class="invalid-feedback">
+                                <div *ngIf="f.lastname.errors.required">Last Name is required</div>
+
+                                <!-- <div class="alert-text" *ngIf="!!registerForm.get('lastname').errors?.minlength">Name
+                                    must be 3 to 60 alphabets.
+                                </div>
+                                <div class="alert-text" *ngIf="!!registerForm.get('lastname').errors?.maxlength">Name
+                                    must be 3 to 60 alphabets.
+                                </div> -->
+                                <div class="alert-text" *ngIf="!!registerForm.get('lastname').errors?.pattern || !!registerForm.get('lastname').errors?.maxlength || !!registerForm.get('lastname').errors?.minlength"> Name should not exceed  above 60 letters: Special characters and numbers are
+                                    not
+                                    allowed.
+                                </div>
+                            </div>
+                            <div class="invalid-feedback alert-text" *ngIf="checkLastname()">
+                                Field should not contain only white spaces.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="details-filling-main">
+                    <div class="col-md-6 col-lg-6 col-xl-6  col-xs-12 col-sm-12 Name-section">
+                        <div class="first-name">
+                            <label class="first-name-text">
+                                Email
+                            </label>
+                            <input type="text" class="input-box-type" placeholder="johnsmith@abc.com"
+                                [(ngModel)]="this.inviteeemail" [disabled]="isDisabled" [formControlName]="'email'"
+                                [ngClass]="{ 'is-invalid': submitted && f.email.errors }" />
+
+                            <!-- Validation -->
+                            <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                                <div *ngIf="f.email.errors.required">Email is required</div>
+                                <div *ngIf="f.email.errors.pattern">Invalid email format. Please enter a valid email address without spaces
+                                    between letters.</div>
+                            </div>
+                            <!-- <div class="invalid-feedback alert-text" *ngIf="fullWhitespaceEmail">
+                                Field should not contain only white spaces.
+                            </div> -->
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-6 col-xl-6  col-xs-12 col-sm-12 Name-section">
+                        <div class="first-name">
+                            <label class="first-name-text">
+                                Role in the family
+                            </label>
+                            <select #roles class="custom-select mb-3" class="select-your-role input-box-type"
+                                [(ngModel)]="this.inviteefamilyrole" [formControlName]="'familyrole'" id="1"
+                                (change)="CheckOthers(roles.value,roles.id)"
+                                [ngClass]="{ 'is-invalid': submitted && f.familyrole.errors }">
+                                <option class="select-your-role" value="">- Select your role -</option>
+                                <option *ngFor="let role of Role">
+                                    {{ role }}
+                                </option>
+                            </select>
+                            <div *ngIf="submitted && f.familyrole.errors" class="invalid-feedback">
+                                <div *ngIf="f.familyrole.errors.required">Role is required</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="details-filling-other">
+                    <div class="col-md-6 col-lg-6 col-xl-6  col-xs-12 col-sm-12 Name-section-other">
+                        <div class="first-name">
+                            <label class="first-name-text">
+                                Phone Number
+                            </label>
+                            <input type="text" class="input-box-type" placeholder="345-567-6787"
+                                [(ngModel)]="this.inviteephonenumber" [disabled]="isDisabled"
+                                [formControlName]="'contactNo'"
+                                [ngClass]="{ 'is-invalid': submitted && f.contactNo.errors }" />
+                            <div *ngIf="submitted && f.contactNo.errors" class="invalid-feedback">
+                                <div *ngIf="f.contactNo.errors.pattern">Only accept 10 numbers.Alphabets are not allowed.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-6 col-xl-6  col-xs-6 col-sm-12 Name-section" *ngIf="visible">
+                        <div class="first-name">
+                            <label class="first-name-text">
+                                Other
+                            </label>
+                            <input type="text" class="input-box-type" id="11" placeholder="Aunt/Uncle"
+                                [formControlName]="'other'" [(ngModel)]="this.inviteeother" pattern="[a-zA-Z ]+"
+                                [ngClass]="{ 'is-invalid': submitted }" />
+                            <div *ngIf="submitted && f.other.errors && f.familyrole.value=='Other'"
+                                class="invalid-feedback">
+                                <div *ngIf="f.other.errors.pattern">Other roles must contain only letters: Special characters
+                                    and numbers are not allowed.</div>
+                            </div>
+                            <div *ngIf="!OtherAvailable()" class="invalid-feedback">
+                                <div>Other is required
+                                </div>
+                            </div>
+                            <div class="invalid-feedback alert-text" *ngIf="checkEmptyOther()" >
+                                Field should not contain only white spaces.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="show-and-prev-btn">
+                    <div class="previous-left-arrow" (click)="prevBtn();">
+                        <img src="../../assets/images/prev-arrow.svg" class="prev-arrow" />
+                        <p class="prev-text">PREV</p>
+                    </div>
+                    <div class="show-my-btn">
+                        <button type="submit" class="show-my-results">
+                            Show my results
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+
+<!-- Loader -->
+<ngx-spinner class="loader-spin" size="default" type="ball-scale-pulse">
+    <p class="loading-text">Please Wait.... </p>
+</ngx-spinner>

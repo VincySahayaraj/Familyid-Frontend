@@ -1,0 +1,199 @@
+<section class="result-section-main">
+    <mat-tab-group [selectedIndex]="1">
+
+        <!-- Family result -->
+        <mat-tab label="FAMILY" class="family-heading-btn">
+            <div class="result-inner-section">
+                <!-- <div class="arrow-result" (click)="downloadPdf();">
+                    <img src="../../assets/images/download-arrow.png">
+                </div> -->
+                <div id="content-to-download">
+                    <div class="h3-heading">
+                        <p class="name-your-family">{{this.hohName}}, your family has been identified as a
+                            <span class="family-type">{{this.familyType}} Family</span>
+                        </p>
+                    </div>
+                    <div class="family-type-logo">
+                        <img src={{url}} alt="family-logo">
+                    </div>
+                    <div class="progress-result-main">
+                        <div>
+                            <h3 class="score-heading">Here’s how you scored in each segment</h3>
+                        </div>
+                        <div class="row">
+                            <div class="col-6 col-lg-3 col-xl-3 col-sm-6 col-xs-6 progress-values"
+                                *ngFor="let total of  this.totalFamilyScore;let i=index">
+                                <p class="percentage-questions">{{total.CategoryPercentage}}%</p>
+                                <mat-progress-bar mode="determinate" value={{total.CategoryPercentage}}
+                                    style="background-color: #E9E9E9;">
+                                </mat-progress-bar>
+                                <p class="progress-bar-text identity">{{total.CategoryName}}</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- family score in table -->
+                    <div class="table-section-result table-responsive">
+                        <table class="table">
+                            <tr class="table-heading">
+                                <th>#</th>
+                                <th>Name</th>
+                                <th *ngFor='let category of  this.familyCategoryScore,let i=index'>
+                                    {{category.CategoryName}}(%)</th>
+                                <th>FAMILYID</th>
+                            </tr>
+                            <tr class="table-body" *ngFor='let individual of  this.familyResult,let i=index'>
+                                <td class="number-row">{{individual.Firstname==null? '':i+1}}</td>
+                                <td>{{individual.Firstname==null? 'Team Average':individual.Firstname}}</td>
+                                <td *ngFor='let score of  individual.CategorywiseScores,let i=index'>
+                                    {{score.CategoryPercentage}}</td>
+
+                                <td>
+                                    <div class="tooltip1">{{individual.TypeDetails.FamilyTypeName}}
+                                        <img src="../../assets/images/information-i-icon-28.jpg" class="i-icon">
+                                        <div class="right">
+                                            <p class="tooltip-content">{{individual.TypeDetails.ShortDescription}}</p>
+                                            <i></i>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <!--  Accordion-->
+                    <div class="accordion-mobile">
+                        <mdb-accordion *ngFor='let individual of  this.familyResultMobile,let i=index'>
+                            <mdb-accordion-item [collapsed]="i==0 ? false:true">
+                                <ng-template mdbAccordionItemHeader>
+                                    <div class="table-heading">
+                                        <div class="name-section">
+                                            <div class="index-acc">
+                                                <p>{{i+1}}</p>
+                                            </div>
+                                            <div class="name-acc">
+                                                <p>{{individual.Firstname}}</p>
+                                            </div>
+                                        </div>
+                                        <div class="total-acc">
+                                            <p class="total-percent">{{individual.TypeDetails.FamilyTypeName}}</p>
+                                            <img src="../../assets/images/acc-down-blue.png" alt="up-arrow"
+                                                class="up-arrow">
+                                            <img src="../../assets/images/acc-down-arrow-new.png" alt="down-arrow"
+                                                class="down-arrow">
+                                        </div>
+                                    </div>
+                                </ng-template>
+                                <ng-template mdbAccordionItemBody>
+                                    <ul class="accordion-result">
+                                        <li class="table-content-mobile"
+                                            *ngFor='let category of  individual.CategorywiseScores,let i=index'>
+                                            <p class="category-name">{{category.CategoryName}}</p>
+                                            <p class="category-score">{{category.CategoryPercentage}}%</p>
+                                        </li>
+                                    </ul>
+                                </ng-template>
+                            </mdb-accordion-item>
+                        </mdb-accordion>
+                    </div>
+                    <div class="family-content-pdf" [ngClass]="pdfconvert ? 'pdf-convert' : 'normal-text'">
+                        <div [innerHTML]="this.longTextIndividual">
+                        </div>
+                    </div>
+                </div>
+                <div class="family-content" [ngClass]="readMore ? 'family-content' : 'family-content-scroll'">
+                    <div [innerHTML]="this.text">
+                    </div>
+                    <!-- <a class="read-more" (click)="toggleView()">{{readMore? 'Read more':'Show less'}}</a> -->
+                </div>
+            </div>
+        </mat-tab>
+
+        <!-- Individual result -->
+        <mat-tab label="INDIVIDUAL">
+            <div class="result-inner-section">
+                <div id="content-to-download">
+                    <div class="h3-heading">
+                        <p class="name-your-family">{{this.hohName}}, you have identified your family as a
+                            <span class="family-type">{{this.individualFamilyType}} Family</span>
+                        </p>
+                    </div>
+
+                    <div class="family-type-logo">
+                        <img src={{IndividualUrl}} alt="family-logo">
+                    </div>
+                    <div class="progress-result-main">
+                        <div>
+                            <h3 class="score-heading">Here’s how you scored in each segment</h3>
+                        </div>
+                        <div class="row">
+                            <div class="col-6 col-lg-3 col-xl-3 col-sm-6 col-xs-6 progress-values"
+                                *ngFor='let heading of this.withoutscore;let i=index'>
+                                <p class="percentage-questions">{{heading.CategoryPercentage}}%</p>
+                                <mat-progress-bar mode="determinate" value={{heading.CategoryPercentage}}
+                                    style="background-color: #E9E9E9;">
+                                </mat-progress-bar>
+                                <p class="progress-bar-text identity">{{heading.CategoryName}} </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="family-content-pdf" [ngClass]="pdfconvert ? 'pdf-convert' : 'normal-text'">
+                        <div [innerHTML]="this.longTextIndividual">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="family-content"
+                    [ngClass]="individualToggle ? 'family-content' : 'family-content-scroll-individual'">
+                    <div [innerHTML]="this.textIndividual">
+                    </div>
+                    <!-- <a class="read-more" (click)="toggleViewIndividual()"  *ngIf="this.maxLength>1800">
+                        {{individualToggle? 'Read more':'Showless'}}
+                    </a> -->
+                </div>
+
+                <!-- Invite your family section -->
+                <div class="invite-family-section" [ngClass]="isinvitee ? 'isivitee-hide' : 'isivitee-show'">
+                    <h3 class="invite-text">INVITE YOUR FAMILY</h3>
+                    <div class="invite-img">
+                        <img src="../../assets/images/invite-family.svg" class="invite-img-mobile">
+                        <img src="../../assets/images/invite-family-desktop.svg" class="invite-img-desktop">
+                        <p class="invite-description">Invite your family members to take the test and discover your
+                            areas of
+                            alignment as well as areas you need to focus on as a family.</p>
+                        <button class="invite-my-family-btn" (click)="invitebtn()">INVITE MY FAMILY</button>
+                    </div>
+                </div>
+            </div>
+        </mat-tab>
+    </mat-tab-group>
+</section>
+
+<!-- Register section -->
+<section class="main-signup">
+    <div class="sign-up-resources-main">
+        <div class="sign-up-inner">
+            <h3 class="sign-up-heading-mobile">
+                FAMILY Id CAN HELP YOUR FAMILY REACH ITS FULL POTENTIAL
+            </h3>
+            <div class="col-md-6 col-xl-6 col-lg-6 col-sm-12 col-xs-12 sign-up-text-content">
+                <h3 class="sign-up-heading">
+                    FAMILY Id CAN HELP YOUR FAMILY REACH ITS FULL POTENTIAL
+                </h3>
+                <p class="sign-up-text">Become a more intentional and focused family by registering on Family ID for a
+                    customized learning path for your family!</p>
+                <button type="button" class="sign-me" (click)="registerForFree()">
+                    <p class="register-btn-text">JOIN THE MASTERCLASS</p>
+                </button>
+            </div>
+            <div class="col-md-6 col-xl-6 col-lg-6 col-sm-12 col-xs-12 sign-up-image-section">
+                <img src="../../assets/images/signup-image.png">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Loader -->
+<ngx-spinner class="loader-spin" size="default" type="ball-scale-pulse">
+    <p class="loading-text">Please Wait.... </p>
+</ngx-spinner>

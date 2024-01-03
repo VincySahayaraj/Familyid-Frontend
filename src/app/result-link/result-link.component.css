@@ -1,0 +1,545 @@
+.result-section-main {
+
+    /* background: #6DC5AA; */
+    background-color: #45B8E8;
+    position: relative;
+    padding: 50px 0px 100px 0px;
+}
+
+.result-inner-section {
+
+    background-color: #FFF;
+    border-radius: 10px;
+    margin: 0 auto;
+    padding: 50px 100px 100px 100px;
+    width: 100%;
+    max-width: 1110px;
+    position: relative;
+    height: auto;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+.progress-bar-section {
+    margin: 130px 0px;
+}
+
+.name-your-family {
+
+    font-family: 'Area-Black';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 38px;
+    text-align: center;
+    color: #333333;
+}
+
+.score-heading {
+    font-family: 'Area-Black';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 38px;
+    text-align: center;
+    color: #121212;
+}
+
+.fid-question1-main .question-section .mat-mdc-progress-bar .mdc-linear-progress__buffer {
+    position: relative;
+}
+
+.mat-mdc-progress-bar .mdc-linear-progress__buffer-bar {
+    --mdc-linear-progress-active-indicator-color: #EDC228 !important;
+    border-radius: 50px !important;
+}
+
+.mat-mdc-progress-bar {
+    --mdc-linear-progress-active-indicator-color: #EDC228 !important;
+    border-radius: 50px !important;
+}
+
+.percentage-questions {
+
+    font-family: 'Area-Black';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 21px;
+    line-height: 26px;
+    text-align: center;
+    color: #333333;
+
+}
+
+.progress-bar-text {
+    padding-top: 10px;
+    display: flex;
+    font-family: 'Area-Black';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 21px;
+    line-height: 26px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #231F20;
+    justify-content: center;
+
+}
+
+.progress-bar-section {
+    padding: 0px 122px;
+    cursor: pointer;
+}
+
+.result-progress {
+    background: linear-gradient(90deg, #CC2C24 0%, #FFCA26 68%, #429653 100%);
+    border-radius: 13px;
+}
+
+.result-inner-section {
+    border-bottom: 1px solid #EEEEEE;
+}
+
+
+.progress-values {
+    padding-bottom: 40px;
+}
+
+.progress-result-main {
+    margin-bottom: 20px;
+}
+
+.based-on-results {
+    display: flex;
+    margin: 45px 0px 0px 100px;
+    justify-content: center;
+    font-family: 'Area';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 16px;
+    text-align: center;
+    color: #575757;
+
+}
+
+.notification-based-result {
+    width: 125px;
+    margin: 0 auto;
+
+}
+
+.needs-improvement{
+
+    margin-left:0px;
+
+}
+
+.my_class1{
+    font-weight:700;
+    font-family:'Area-Bold';
+   
+}
+
+
+.family-type-logo {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
+
+.read-more {
+
+    font-family: 'Area';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 38px;
+    text-decoration-line: underline;
+    color: #4A4A4A;
+    cursor:pointer;
+
+}
+
+.family-type-logo img {
+    width: 300px;
+    height: 300px;
+
+}
+
+.family-content {
+    background: #fff;
+    border-radius: 20px;
+    font-family: 'Area';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 36px;
+    padding: 40px;
+    color: #272424;
+    box-shadow: 0px 1px 6px 1px #888888;
+}
+
+.name-your-family {
+
+    font-family: 'Area';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 45px;
+    text-align: center;
+    color: #333333;
+}
+
+.family-type {
+
+    font-family: 'Area-Black';
+    font-weight: 700;
+
+}
+
+/* scroll bar */
+.family-content-scroll {
+
+    height: 840px;
+    overflow-y: scroll;
+
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 0px 50px 50px 0px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888;
+    height:50px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* invite section */
+.invite-text {
+    font-family: 'Area-Black';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 21px;
+    line-height: 26px;
+    text-align: center;
+    letter-spacing: 0.761905px;
+    text-transform: uppercase;
+    display: inline-block;
+    margin-top: 50px;
+    width: 100%;
+    color: #000000;
+}
+
+.invite-description {
+    font-family: 'Area';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 36px;
+    text-align: center;
+    color: #272424;
+    max-width: 650px;
+    width: 100%;
+    margin: 30px auto;
+}
+
+.invite-family-section {
+    margin-top: 20px;
+}
+
+.invite-img {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.main-signup {
+
+    padding-bottom: 200px;
+}
+
+.invite-my-family-btn {
+
+    background: #EDC228;
+    border-radius: 25px;
+    font-family: 'Area-Black';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 21px;
+    line-height: 26px;
+    text-align: center;
+    letter-spacing: 0.761905px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    width: 280px;
+    height: 50px;
+    border: none;
+}
+
+.isivitee-show {
+
+    display: block;
+}
+
+.isivitee-hide {
+
+    display: none;
+
+}
+
+@media(max-width:800px) {
+    .result-section-main {
+
+        height: auto;
+        padding: 50px 0px 0px 0px;
+    }
+
+    .arrow-result {
+        display: none;
+    }
+
+    .result-inner-section {
+
+        padding: 50px 10px;
+        max-width: 350px;
+
+    }
+
+    .person-detail {
+
+        background: url('../../assets/images/leaf-structure.png') no-repeat center;
+        position: relative;
+        padding: 9px 0;
+        background-position-y: 7px;
+        margin-top: 100px;
+
+    }
+
+    .person-name {
+
+        font-size: 24px;
+        line-height: 29px;
+
+    }
+
+    .person-role {
+
+        font-size: 18px;
+        line-height: 22px;
+
+    }
+
+    .hoh-detail {
+
+        margin-top: 80px;
+    }
+
+    .individual-detail {
+
+        max-width: 236px;
+        display: block;
+        margin: 0 auto 50px auto;
+
+    }
+
+    .individual-detail-text {
+        margin-top: 75px;
+    }
+
+    .open-icon {
+        position: absolute;
+        top: 58px;
+        left: 58px;
+        display: block;
+    }
+
+    .closed-icon {
+        position: absolute;
+        right: 83px;
+        top: 43%;
+        display: block;
+
+    }
+
+    .individual-detail-text {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 41px;
+        margin-top: 75px;
+    }
+
+    .desktop-quotation-open,
+    .desktop-quotation-closed {
+        display: none;
+    }
+
+    .progress-bar-section {
+        padding: 0px;
+    }
+
+    .progress-bar-text {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 22px;
+        font-family: 'Area';
+    }
+
+    .progress-values {
+        border: none;
+    }
+
+    .invite-description {
+        font-size: 18px;
+    }
+
+    .score-heading {
+        font-weight: 600;
+        font-size: 21px;
+        line-height: 35px;
+    }
+
+    .name-your-family {
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 38px;
+    }
+
+    .sign-up-resources-main {
+
+        max-width: 350px;
+    }
+
+    .sign-up-image-section img {
+        width: 330px;
+        margin: 10px 0px;
+
+    }
+
+    .sign-up-inner {
+        flex-direction: column;
+        padding: 30px 0px;
+    }
+
+    .sign-up-text {
+
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 36px;
+        margin: 20px auto;
+        text-align: center;
+
+    }
+
+    .sign-up-text-content {
+        order: 2;
+        padding: 0px;
+    }
+
+    .sign-up-image-section {
+        order: 1;
+    }
+
+    .signup-btn-text {
+        display: none;
+    }
+
+    .sign-up-resources-main {
+        padding: 0px 20px 10px 20px;
+    }
+
+    .sign-me {
+        margin: 0 auto;
+    }
+
+    .sign-up-heading-mobile {
+        font-family: 'Area-Black';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 21px;
+        line-height: 26px;
+        letter-spacing: 0.761905px;
+        text-transform: uppercase;
+        color: #000000;
+        text-align: center;
+        display: block;
+    }
+
+    .sign-up-heading {
+        display: none;
+    }
+
+    .based-on-results {
+        margin: 30px 0px 0px 50px;
+        font-weight: 400;
+        font-size: 10px;
+        font-family: 'Area';
+        line-height: 16px;
+
+    }
+
+    .notification-based-result {
+        width: 71px;
+
+    }
+
+    .notification-based-result {
+
+        margin-top: 20px;
+        margin-left: -5px;
+        font-family: 'Area';
+        font-style: normal;
+        font-size: 10px;
+        line-height: 11px;
+    }
+
+    .main-signup{
+        padding-bottom: 50px;
+    }
+
+    .progress-bar-section{
+        margin: 70px 0px;
+    }
+
+    .my_class2{
+        font-weight: 400;
+    }
+
+    .family-content {
+        font-size: 20px;
+        line-height: 33px;
+        padding: 25px;
+    }
+
+    .family-content-scroll {
+
+        height: 1000px;
+        overflow-y: scroll;
+    
+    }
+
+    .family-type-logo img {
+        width: 200px;
+        height: 200px;
+    
+    }
+}
+
+
+
+

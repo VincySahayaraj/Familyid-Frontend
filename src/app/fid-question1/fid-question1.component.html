@@ -1,0 +1,97 @@
+<section class="fid-question1-main" >
+    <div class="question-section" *ngIf="showTotal">
+
+        <!-- Catetgories Section -->
+        <div class="d-flex" >
+            <div *ngFor='let heading of category;let i=index' >
+                <div class="col-6 col-lg-3 col-xl-3 col-sm-6 col-xs-6">
+                    <div *ngIf='heading.categoryname=== this.category[i].categoryname'>
+                        <mat-progress-bar mode="determinate" value={{this.progressBar[i]}}
+                            style="background-color: #E9E9E9;">
+                        </mat-progress-bar>
+                    </div>
+                    <p class="progress-bar-text"
+                        [ngClass]="id==heading.categoryname ?'current-category' : 'progress-bar-text'"
+                        id="{{heading.categoryname}}">{{heading.categoryname}}</p>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- single progress bar -->
+
+        <!-- <div class="d-flex">
+            <mat-progress-bar mode="determinate" value={{this.singleProgressBar}}
+            style="background-color: #E9E9E9;">
+        </mat-progress-bar>
+        </div> -->
+
+        <!-- Current question and Total Question -->
+        <p class="question-number"><span id="qn-number" class="qn-number">{{this.totalCurrentQuestion}}</span><span
+                id="total-questions" class="total-questions">/{{this.totalquestionlist}}</span>
+        </p>
+
+        <!--  Question Display-->
+        <div class="question">
+            <p class="question-text" [ngClass]="animationadding ? 'animationadded' : 'withoutanimation'">
+                {{this.questions}}</p>
+        </div>
+
+        <!-- Options for Question -->
+        <div class="option-answer">
+            <form [formGroup]="form">
+                <div id="debt-amount-slider">
+                    <input type="radio" [(ngModel)]="answer.score"
+                        (change)="newnextQuestion(this.age,this.attemptID,this.visitorid,this.answer,this.questions,this.scoreCard,this.totalquestionlist,'1')"
+                        name="score" id="1" value="1" formControlName="score">
+                    <label for="1" data-debt-amount="Strongly Disagree"></label>
+                    <input type="radio" [(ngModel)]="answer.score"
+                        (change)="newnextQuestion(this.age,this.attemptID,this.visitorid,this.answer,this.questions,this.scoreCard,this.totalquestionlist,'2')"
+                        name="score" id="2" value="2" formControlName="score">
+                    <label for="2" data-debt-amount="Disagree"></label>
+                    <input type="radio" [(ngModel)]="answer.score"
+                        (change)="newnextQuestion(this.age,this.attemptID,this.visitorid,this.answer,this.questions,this.scoreCard,this.totalquestionlist,'3')"
+                        name="score" id="3" value="3" formControlName="score">
+                    <label for="3" data-debt-amount="Neutral"></label>
+                    <input type="radio" [(ngModel)]="answer.score"
+                        (change)="newnextQuestion(this.age,this.attemptID,this.visitorid,this.answer,this.questions,this.scoreCard,this.totalquestionlist,'4')"
+                        name="score" id="4" value="4" formControlName="score">
+                    <label for="4" data-debt-amount="Agree"></label>
+                    <input type="radio" [(ngModel)]="answer.score"
+                        (change)="newnextQuestion(this.age,this.attemptID,this.visitorid,this.answer,this.questions,this.scoreCard,this.totalquestionlist,'5')"
+                        name="score" id="5" value="5" formControlName="score">
+                    <label for="5" data-debt-amount="Strongly Agree"></label>
+                    <div id="debt-amount-pos"></div>
+                </div>
+                <div *ngIf="submitted  && f['score'].errors" class="invalid-feedback">
+                    <div *ngIf="f['score'].errors && f['score'].errors['required']" class="validation-question">Please
+                        select an option</div>
+                </div>
+            </form>
+        </div>
+
+        <!-- Previous and next Arrow -->
+        <div class="arrow-icons">
+            <button type="button" class="left-arrow" (click)=prevQuestion() [disabled]="buttonDisabled"
+                [ngClass]="buttonDisabled ? 'hide-prev' :'show-prev'">
+                <img src="../../assets/images/prev-arrow.svg" />
+                <p class="prev-text">PREV</p>
+            </button>
+
+            <button class="right-arrow" [disabled]="buttonDisablednext"
+                (click)=nextQuestion(this.age,this.attemptID,this.visitorid,this.answer,this.questions,this.scoreCard,this.totalquestionlist)
+                [ngClass]="buttonDisablednext ? 'hide-next' :'show-next'">
+                <p class="next-text">NEXT</p>
+                <img src="../../assets/images/next-arrow.svg" />
+            </button>
+        </div>
+    </div>
+</section>
+
+<!-- Question Loader -->
+<ngx-spinner class="loader-question" size="default" type="ball-scale-pulse" style="background-color: transparent;">
+</ngx-spinner>
+
+<!-- Normal Loader -->
+<ngx-spinner class="loader" size="default" type="ball-scale-pulse"   [name]="'mySpinner'"  >
+</ngx-spinner>

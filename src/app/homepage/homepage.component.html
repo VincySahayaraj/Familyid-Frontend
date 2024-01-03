@@ -1,0 +1,73 @@
+<section class="homepage-main">
+    <div class="d-flex video-and-image">
+        <div class="col-12 col-sm-12 col-xs-12 col-md-12  video-main first-column btnStyle"
+            [ngClass]='this.play?"play-video":"pause-video"'>
+            <!-- <img src="../../assets/images/close-icon.png" [ngClass]='this.play?"video-show":"video-hide"' class="close-icon" (click)="toggleVideo()"> -->
+            <div [ngClass]="this.play?'before-play':'after-play'" class="video-section">
+                <!-- <div *ngIf="displayVideo; then thenBlock; else elseBlock"></div> -->
+                <!-- <img src="../../assets/images/thumbnail-img.png" [ngClass]='this.play?"img-hide":"img-show"' > -->
+
+                <img src="../../assets/images/thumbnail-img.png" *ngIf='this.secondPause' >
+               
+                <!-- <ng-template #elseBlock> -->
+              <div  [ngClass]="this.secondPause?'video-invisible':'video-visible'">
+                    <video class="video-course" #videoElement   disablePictureInPicture 
+                        [ngClass]='this.play?"video-show":""' >
+                        <source [src]="videoUrl" type="video/mp4" >
+                        <source [src]="videoUrl" type="video/webm">
+                        Your browser does not support the video tag.
+                    </video>
+                    <div class="" (click)="toggleVideo()" [ngClass]='this.play?"video-show overlay":"without-overlay"'></div>
+                    <!-- <div class="" (click)="toggleVideo()" [ngClass]='this.play?"video-show overlay":""' ></div> -->
+                </div>
+                <!-- <video class="video-course"  controls (click)="pauseVideo()" [ngClass]='this.play?"video-show":"video-hide"'> -->
+                <!-- <source src="../../assets/images/test-video.mp4" type="video/mp4"> -->
+                <!-- <source src="../../assets/images/assessment-video.mp4" type="video/mp4"> -->
+                <!-- <source src="../../assets/images/assessment-video_x800_1.mp4" type="video/mp4">  -->
+                <!-- <source src="../../assets/images/resize-videoo.mp4" type="video/mp4"> -->
+                <!-- <source src="../../assets/images/assessment-video 1800x710 (1).mp4" type="video/mp4"> -->
+                <!-- </video> -->
+                <!-- </ng-template> -->
+
+                <!-- <ng-template #thenBlock> -->
+                    <!-- <div class="video-btn"> -->
+                        <div class="play-button">
+                            <img src="../../assets/images/play-button.png" [ngClass]='this.play?"hide-playbtn":"show-playbtn"'
+                                class="play-btn" alt="play-btn" (click)="playVideo();" />
+                            <img src="../../assets/images/pay-icon-btn.svg"
+                                [ngClass]='this.play?"hide-playbtn-mobile":"play-btn-mobile"' class="" alt="play-btn"
+                                (click)="playVideo();" />
+                        <!-- </div> -->
+                    </div>
+               
+                <!-- <div class="quiz-text">
+                        <p class="why-take-quiz">Why take the quiz?</p>
+                        <p class="watch-to-find">Watch to find out</p>
+                    </div> -->
+                <!-- </ng-template> -->
+            </div>
+        </div>
+        <div class="col-12 col-sm-12 col-xs-12 col-md-12  family-section"
+            [ngClass]='this.play?"hide-section":"show-section"'>
+            <div class="does-your-family">
+                <h2>What is your Family ID?</h2>
+            </div>
+            <div class="family-image-section">
+                <img src="../../assets/images/family-pic.png" class="family-pic" alt="family-pic" />
+            </div>
+            <p class="are-you-ready">Are you ready to lead your family with intentional direction?</p>
+            <div class="get-started-btn">
+                <button class="get-started-now" (click)="btnClick();">GET STARTED NOW</button>
+                <button class="get-started-mobile" (click)="btnClick();">GET STARTED</button>
+                <div class="get-time-section">
+                    <img src="../../assets/images/alarm-icon.jpg">
+                    <p class="ten-minutes-text">10 min</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Loader -->
+<ngx-spinner class="loader-spin" size="default" type="ball-scale-pulse">
+</ngx-spinner>
